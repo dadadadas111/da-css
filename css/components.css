@@ -339,7 +339,7 @@ tbody tr:hover {
 }
 
 /* Zebra stripe pattern */
-table.zebra tbody tr:nth-child(odd) {
+table.zebra tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
