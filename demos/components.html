@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Showcase</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+    <header>
+        <h1>Component Showcase</h1>
+    </header>
+
+    <div>
+        <!-- Button Showcase -->
+        <section>
+            <h2>Buttons</h2>
+            <button class="primary">Primary Button</button>
+            <button class="secondary">Secondary Button</button>
+            <button class="danger">Danger Button</button>
+            <button class="success">Success Button</button>
+            <button class="warning">Warning Button</button>
+            <button class="outline">Outline Button</button>
+            <button class="outline primary">Outline Primary Button</button>
+            <button class="outline secondary">Outline Secondary Button</button>
+            <button class="outline danger">Outline Danger Button</button>
+            <button class="outline success">Outline Success Button</button>
+            <button class="outline warning">Outline Warning Button</button>
+            <button disabled>Disabled Button</button>
+        </section>
+
+        <!-- Input Showcase -->
+        <section>
+            <h2>Input Elements</h2>
+            <input type="text" placeholder="Text Input">
+            <textarea placeholder="Text Area"></textarea>
+            <select>
+                <option disabled>Option Disabled</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
+        </section>
+
+        <!-- Card Showcase -->
+        <section>
+            <h2>Card</h2>
+            <div class="card">
+                <div class="card-header">Card Header</div>
+                <div class="card-body">Card Body Content</div>
+                <div class="card-footer">Card Footer</div>
+            </div>
+        </section>
+
+        <!-- Alert Showcase -->
+        <section>
+            <h2>Alerts</h2>
+            <div class="alert info">Info Alert</div>
+            <div class="alert success">Success Alert</div>
+            <div class="alert warning">Warning Alert</div>
+            <div class="alert danger">Danger Alert</div>
+        </section>
+
+        <!-- Modal Showcase -->
+        <section>
+            <h2>Modal</h2>
+            <!-- Trigger Button for Modal -->
+            <button class="primary" id="openModalBtn">Open Modal</button>
+
+            <!-- Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <div class="modal-header">Modal Header</div>
+                    <div class="modal-body">This is the modal body content.</div>
+                    <div class="modal-footer">
+                        <button class="primary" id="closeModalBtn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltip Showcase -->
+        <section>
+            <h2>Tooltips</h2>
+            <div class="tooltip">Hover over me
+                <span class="tooltiptext">Tooltip text</span>
+            </div>
+        </section>
+
+        <!-- Table Showcase -->
+        <section>
+            <h2>Tables</h2>
+            
+            <h3>Standard Table</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Designer</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Johnson</td>
+                        <td>mike@example.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Williams</td>
+                        <td>sarah@example.com</td>
+                        <td>Product Owner</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Zebra-Striped Table</h3>
+            <table class="zebra">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Designer</td>
+                    </tr>
+                    <tr>
+                        <td>Mike Johnson</td>
+                        <td>mike@example.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Williams</td>
+                        <td>sarah@example.com</td>
+                        <td>Product Owner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Component Showcase</p>
+    </footer>
+
+    <script>
+        // Modal interaction
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        const modal = document.getElementById("myModal");
+
+        // Open Modal
+        openModalBtn.addEventListener("click", function() {
+            modal.classList.add("active");
+        });
+
+        // Close Modal
+        closeModalBtn.addEventListener("click", function() {
+            modal.classList.remove("active");
+        });
+
+        // Optionally close modal when clicking outside of it
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
